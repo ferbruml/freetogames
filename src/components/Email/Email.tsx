@@ -26,7 +26,7 @@ const Email = () => {
   }
 
   function handleSend(event: FormEvent) {
-    event.preventDefault()
+    event.stopPropagation()
 
     send()
   }
@@ -44,7 +44,7 @@ const Email = () => {
         placeholder="Email"
       />
       <button className="border rounded bg-zinc-400 w-20" onClick={handleSend}>
-        Send
+        Enviar
       </button>
     </div>
   )

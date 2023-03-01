@@ -23,7 +23,7 @@ const GlobalSearch = () => {
   }
 
   return (
-    <div className="flex items-center">
+    <>
       <label htmlFor="filter" className="sr-only">
         Search
       </label>
@@ -32,12 +32,12 @@ const GlobalSearch = () => {
         id="filter"
         name="filter"
         type="text"
-        placeholder="Search..."
+        placeholder="Pesquisar..."
         onChange={(e) => {
           searchForGames(e.target.value)
         }}
       />
-    </div>
+    </>
   )
 }
 
