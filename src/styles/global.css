@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --webkit-font-smoothing: antialiased; /* chrome, safari */
+  --moz-osx-font-smoothing: grayscale; /* firefox */
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body * {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: -0.02em;
+}
+
+body {
+  @apply antialiased bg-zinc-300;
+  overflow-x: hidden;
+  padding: 2rem;
+}
