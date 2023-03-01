@@ -1,4 +1,4 @@
-import Card from "../../Card/Card"
+import Card from "../Card/Card"
 import { useContext } from "react"
 import { GameContext } from "../../context/GameContext"
 
