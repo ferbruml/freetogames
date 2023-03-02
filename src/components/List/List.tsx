@@ -22,7 +22,7 @@ const List = () => {
     setGames(
       ([] as Game[])
         .concat(games)
-        .sort((a, b) => a.publisher.toLowerCase().localeCompare(b.publisher.toLowerCase()))
+        .sort((a, b) => a.title.toLowerCase().localeCompare(b.title.toLowerCase()))
     )
   }
 
