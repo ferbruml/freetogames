@@ -34,3 +34,4 @@ A aplicação possui muito potencial para crescer. Dentre as features que podem 
 3. Usuário poder salvar um perfil de filtros a serem aplicados todas as vezes
 4. Limpar filtros
 5. Ordenação descendente
+6. Responsivdade do modal
