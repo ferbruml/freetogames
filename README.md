@@ -5,6 +5,9 @@ Este projeto integra com a API supracitada para apresentar uma listagem de jogos
 ## Scripts disponíveis
 
 No diretório do projeto, executar
+### `npm i`
+
+para instalar as dependências. Após, executar
 
 ### `npm start`
 
@@ -12,6 +15,9 @@ que inicializará a aplicação em modo de desenvolvimento.\
 Será aberto o endereço [http://localhost:3005](http://localhost:3005) no browser para visualização da aplicação.
 
 No diretório `backend`, executar
+### `npm i`
+
+para instalar as dependências. Após, executar
 
 ### `npm start`
 
