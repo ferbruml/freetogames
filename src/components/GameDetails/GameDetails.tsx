@@ -20,30 +20,38 @@ const GameDetails = ({ game }: GameProps) => {
       >
         URL do game
       </label>
-      <a className="mt-4" id="game_url" href={game.game_url}>
+      <a className="mt-4 text-sky-500/100" id="game_url" href={game.game_url}>
         {game.game_url}
       </a>
 
-      <table className="max-sm:overflow-auto table-fixed max-sm:grid-cols-1 w-full text-sm text-center m-4">
-        <thead className="text-xs">
-          <tr>
-            <th className="p-8">Criador</th>
-            <th>Genero</th>
-            <th>Plataforma</th>
-            <th>Desenvolvedor</th>
-            <th className="leading-8">Data lançamento</th>
-          </tr>
-        </thead>
-        <tbody className="divide-y">
-          <tr>
-            <td>{game.publisher}</td>
-            <td>{game.genre}</td>
-            <td>{game.platform}</td>
-            <td>{game.developer}</td>
-            <td>{game.release_date}</td>
-          </tr>
-        </tbody>
-      </table>
+      <div className="sm:overflow-x-auto p-4">
+        <table className="table-fixed w-full text-sm text-center m-4">
+          <thead className="text-xs">
+            <tr className="break-words">
+              <th className="sm:w-auto">Criador</th>
+              <th>Genero</th>
+              <th>Plataforma</th>
+              <th>Desenvolvedor</th>
+              <th className="leading-8">Data lançamento</th>
+              <th>Profile URL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="break-words">
+              <td>{game.publisher}</td>
+              <td>{game.genre}</td>
+              <td>{game.platform}</td>
+              <td>{game.developer}</td>
+              <td>{game.release_date}</td>
+              <td className="text-sky-500/100">
+                <a href={`${game.freetogame_profile_url}`}>
+                  {game.freetogame_profile_url}
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   )  
 }

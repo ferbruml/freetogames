@@ -4,6 +4,8 @@ import { ModalProps } from "../../interfaces/interfaces"
 
 const Modal = ({ open, setOpen, game }: ModalProps) => {
   return (
+    <div className="w-full max-w-3xl mx-auto">
+
     <Dialog.Root open={open} onOpenChange={setOpen}>
       <Dialog.Portal>
         <Dialog.Overlay className="w-screen h-screen bg-black/80 fixed inset-0" />
@@ -17,6 +19,7 @@ const Modal = ({ open, setOpen, game }: ModalProps) => {
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>
+    </div>
   )
 }
 
