@@ -7,7 +7,10 @@ interface GameProps {
 
 const Card = ({ game }: GameProps) => {
   return (
-    <li className="flex flex-col items-center">
+    <li 
+      className="flex flex-col items-center"
+      key={game.id}
+    >
       <Image game={game} />
       <p>
         {game.title.length > 25

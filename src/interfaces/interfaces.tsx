@@ -19,6 +19,7 @@ export interface GameContextData {
   setFilteredGames: (filteredGames: Game[]) => void
   setSelectedGames: (selectedGame: Game) => void
   removeSelectedGame: (id: number) => void
+  setGames: (games: Game[]) => void
 }
 
 export interface ModalProps {

@@ -1,7 +1,7 @@
 import React from "react"
-import { FaHeart, FaRegHeart, FaInfo } from "react-icons/fa"
 import Modal from "../Modal/Modal"
 import { Game } from "../../interfaces/interfaces"
+import { FaHeart, FaRegHeart, FaInfo } from "react-icons/fa"
 interface ActionsProps {
   setIsGameSelected: (selected: Boolean) => void
   selected: Boolean
@@ -34,7 +34,11 @@ const Actions = ({ setIsGameSelected, selected, game }: ActionsProps) => {
       <button onClick={handleModalOpen}>
         <FaInfo className="bg-white" />
       </button>
-      {open ? <Modal open={open} setOpen={setOpen} game={game} /> : null}
+      {
+        open 
+        ? <Modal open={open} setOpen={setOpen} game={game} /> 
+        : null
+      }
     </div>
   )
 }

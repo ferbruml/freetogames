@@ -1,6 +1,10 @@
 const mailer = require("nodemailer");
 
-module.exports = (image, description) => {
+/*
+  TODO: this should receive an array of games
+  and send them as html by email
+*/
+module.exports = (email) => {
   const smtpTransport = mailer.createTransport({
     service: "gmail",
     auth: {
@@ -11,10 +15,10 @@ module.exports = (image, description) => {
 
   const mail = {
     from: "Ferrnanda <februml@gmail.com.br>",
-    to: 'fernanda.brumlousada@gmail.com',
-    subject: `Fernanda te mandou a merda`,
+    to: `${email}`,
+    subject: 'Free games to play',
     //text: mensagem,
-    html: image,
+    html: <p>You received free games to play!</p>,
   }
 
   return new Promise((resolve, reject) => {

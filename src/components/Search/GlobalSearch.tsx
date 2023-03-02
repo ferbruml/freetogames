@@ -24,15 +24,18 @@ const GlobalSearch = () => {
 
   return (
     <>
-      <label htmlFor="filter" className="sr-only">
+      <label 
+        htmlFor="filter" 
+        className="sr-only"
+      >
         Search
       </label>
       <input
-        className="ml-[100px] bg-zinc-200 rounded min-w-[50%]"
+        className="bg-zinc-200 rounded min-w-[50%] p-2 text-zinc-500"
         id="filter"
         name="filter"
         type="text"
-        placeholder="Pesquisar..."
+        placeholder="Search..."
         onChange={(e) => {
           searchForGames(e.target.value)
         }}

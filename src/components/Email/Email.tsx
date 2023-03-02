@@ -1,20 +1,20 @@
 import axios from "axios";
-import { FormEvent, useContext } from "react"
-import { GameContext } from "../../context/GameContext";
+import { FormEvent, useContext, useState } from "react"
+//import { GameContext } from "../../context/GameContext";
 
+/*
+  TODO: should send an array of selected games
+*/
 const Email = () => {
-  const { selected } = useContext(GameContext)
+  const [ email, setEmail ] = useState<string>("")
+  //const { selected } = useContext(GameContext)
 
   async function send() {
     const formData = new FormData()
-    formData.append('image', selected[0].thumbnail)
-    formData.append('description', selected[0].short_description)
-
-    //console.log('fernanda image = ', formData.get("image"))
-    //console.log("fernanda description = ", formData.get("description"))
+    formData.append('email', email)
 
     try {
-      const result = await axios.post('http://localhost:3047/send', formData, {
+      const result = await axios.post('http://localhost:3035/send', formData, {
         headers: {
           'content-type': 'application/x-www-form-urlencoded',
         },
@@ -32,19 +32,27 @@ const Email = () => {
   }
 
   return (
-    <div className="flex gap-2">
-      <label htmlFor="email" className="sr-only">
+    <div className="flex max-sm:flex-col gap-4">
+      <label 
+        htmlFor="email" 
+        className="sr-only"
+      >
         Email
       </label>
       <input
-        className="min-w-[50%] bg-zinc-200 rounded"
+        className="min-w-[50%] bg-zinc-200 rounded p-2 text-zinc-500"
         id="email"
         name="email"
         type="text"
         placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
       />
-      <button className="border rounded bg-zinc-400 w-20" onClick={handleSend}>
-        Enviar
+      <button 
+        className="border rounded bg-zinc-400 w-20 text-zinc-800" 
+        onClick={handleSend}
+      >
+        Send
       </button>
     </div>
   )

@@ -41,6 +41,7 @@ export default function GameContextProvider({
         filtered,
         selected,
         setFilteredGames,
+        setGames,
         setSelectedGames,
         removeSelectedGame,
       }}
