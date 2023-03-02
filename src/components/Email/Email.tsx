@@ -1,22 +1,17 @@
 import axios from "axios";
 import { FormEvent, useContext, useState } from "react"
-//import { GameContext } from "../../context/GameContext";
 
 /*
-  TODO: should send an array of selected games
+  TODO: should send an array of selected games, probably with FormData
 */
 const Email = () => {
-  const [ email, setEmail ] = useState<string>("")
-  //const { selected } = useContext(GameContext)
+  const [ email, setEmail ] = useState<string>('')
 
   async function send() {
-    const formData = new FormData()
-    formData.append('email', email)
-
     try {
-      const result = await axios.post('http://localhost:3035/send', formData, {
+      const result = await axios.post('http://localhost:3035/send', {email: `${email}`}, {
         headers: {
-          'content-type': 'application/x-www-form-urlencoded',
+          'content-type': 'application/json',
         },
       })
     }

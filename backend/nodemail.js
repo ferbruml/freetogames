@@ -18,7 +18,7 @@ module.exports = (email) => {
     to: `${email}`,
     subject: 'Free games to play',
     //text: mensagem,
-    html: <p>You received free games to play!</p>,
+    html: '<p>You received free games to play!</p>',
   }
 
   return new Promise((resolve, reject) => {

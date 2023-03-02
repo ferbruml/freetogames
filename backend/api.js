@@ -15,8 +15,8 @@ app.get('/', (req, res, next) => {
         to be passed to nodemail
 */
 app.post('/send', (req, res, next) => { 
-    var data = req.body
-    console.log('req.body = ', req.body)
+    var email = req.body.email
+    console.log('email = ', email)
 
     require("./nodemail")(email)
       .then((response) => res.json(response))
