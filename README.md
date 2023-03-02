@@ -15,7 +15,7 @@ No diretório `backend`, executar
 
 ### `npm start`
 
-que inicializará o servidor da aplicação para o envio de email. No momento, esta feature está rudimentar e apenas envia um email default para o endereço informado.\
+que inicializará o servidor da aplicação para o envio de email. No momento, esta feature está rudimentar e apenas envia um email default para o endereço informado.
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
@@ -23,4 +23,8 @@ que inicializará o servidor da aplicação para o envio de email. No momento, e
 
 A aplicação possui muito potencial para crescer. Dentre as features que podem ser implementadas e terminadas estão:
 
-1. Enviar o emails favoritados por email, em formato html, com os principais campos que identificam um game ( como imagem, título e descrição )
+1. Enviar os games favoritados por email, em formato html, com os principais campos que identificam um game ( como imagem, título e descrição )
+2. Filtros dinâmicos de múltipla escolha
+3. Usuário poder salvar um perfil de filtros a serem aplicados todas as vezes
+4. Limpar filtros
+5. Ordenação descendente
