@@ -1,37 +1,34 @@
-# Projeto de integração com a API [freetogames](https://www.freetogame.com/api-doc)
+# Integration project with API [freetogames](https://www.freetogame.com/api-doc)
 
-Este projeto integra com a API supracitada para apresentar uma listagem de jogos na tela, com as features de pesquisa por keyword, ordenação por data de publicação ou por nome do game, detalhe do game selecionado e favoritar o game para ser enviador por email ( ainda em desenvolvimento ).
+This project integrates with the aforementioned API to present a list of games on the screen, with search features by keyword, sorting by publication data or by game name, details of the selected game and favorite the game to be sent by email. (still in development).
 
-## Scripts disponíveis
+## Available script
 
-No diretório do projeto, executar
+In the project directory, run
 ### `npm i`
 
-para instalar as dependências. Após, executar
+to install the dependencies. After that, run
 
 ### `npm start`
 
-que inicializará a aplicação em modo de desenvolvimento.\
-Será aberto o endereço [http://localhost:3005](http://localhost:3005) no browser para visualização da aplicação.
+to launch the application in development mode.\
+The address [http://localhost:3005](http://localhost:3005) will be opened on the brower.
 
-No diretório `backend`, executar
+In the `backend` directory, run
 ### `npm i`
 
-para instalar as dependências. Após, executar
+to install the dependencies. After that, run
 
 ### `npm start`
 
-que inicializará o servidor da aplicação para o envio de email. No momento, esta feature está rudimentar e apenas envia um email default para o endereço informado.
+that will lauch the application server to send email. Right now this feature is rudimentary and just sends a standard email to the entered address.      
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Additional features
 
-## Features adicionais
+Among the features that can be implemented and finished are:
 
-A aplicação possui muito potencial para crescer. Dentre as features que podem ser implementadas e terminadas estão:
-
-1. Enviar os games favoritados por email, em formato html, com os principais campos que identificam um game ( como imagem, título e descrição )
-2. Filtros dinâmicos de múltipla escolha
-3. Usuário poder salvar um perfil de filtros a serem aplicados todas as vezes
-4. Limpar filtros
-5. Ordenação descendente
-6. Responsivdade do modal
+1. Send favorite games by email, in html format, with the main fields that identify a game (such as image, title and description)
+2. Multiple choice dynamic filters
+3. Clean filters
+4. Descending sort
+5. Modal`s responsiveness
